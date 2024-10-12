@@ -1,0 +1,815 @@
+$white: #ffffff;
+$black: #000000;
+$gray-dark: #343a40;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$primary-1: #AB7442;
+
+
+
+$primary-2: #ba7a3e8d;
+$primary-3: #ab75427a;
+$primary-4: #30d4d4;
+$background: rgba(53, 53, 53, .7);
+$font-family-base: 'Open Sans', sans-serif;
+$box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-primary-1 {
+    color: $primary-1;
+
+}
+
+.main-btn {
+    background-color: $primary-1;
+    color: $white;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    border: 1px solid $primary-1;
+
+    &:hover,
+    &:focus {
+        background-color: $white;
+        color: $primary-1;
+        border: 1px solid $primary-1;
+
+    }
+
+}
+
+%main-btn-1 {
+    background-color: $primary-1;
+    color: $white;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    border: 1px solid $primary-1;
+
+    &:hover,
+    &:focus {
+        background-color: $white;
+        color: $primary-1;
+        border: 1px solid $primary-1;
+
+    }
+
+}
+
+%main-btn-2 {
+    background-color: $white;
+    color: $primary-1;
+    padding: 3px 13px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+
+    &:hover,
+    &:focus {
+        background-color: $primary-1;
+        color: $white;
+    }
+}
+
+%main-btn-3 {
+    background-color: $white;
+    color: $primary-1;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid $primary-1;
+
+    &:hover,
+    &:focus {
+        background-color: $primary-1;
+        color: $white;
+    }
+}
+
+%main-btn-4 {
+    color: $white;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: $background;
+    border: 1px solid $white;
+    border-radius: 5px;
+
+    &:hover {
+        color: $primary-1;
+        // cursor: pointer;
+        padding: 5px 10px;
+        background-color: $gray-400;
+        border: 1px solid $primary-1;
+    }
+}
+
+%main-btn-teem {
+    color: $primary-1;
+    background: $white ;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+
+    &:hover {
+        color: $white;
+        background: $primary-1;
+    }
+}
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin section-title {
+    color: $black;
+
+    h1 {
+        display: inline-block;
+        padding: 0 60px;
+        position: relative;
+    }
+
+    & h1::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 5px;
+        bottom: 0;
+        background: $black;
+        left: 0;
+
+    }
+
+    & h1::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 5px;
+        bottom: 0;
+        background: $black;
+        right: 0;
+
+    }
+
+
+}
+
+@mixin section-title-after {
+    color: $gray-700;
+    position: relative;
+
+    & h1::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 5px;
+        bottom: 0;
+        background: $gray-700;
+    }
+
+}
+
+// page-header
+.page-header {
+    // background: $background url(img/carousel-1.jpg);
+    background: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url(img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+
+    .breadcrumb {
+        .breadcrumb-item {
+            &::before {
+                color: $white;
+            }
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        a.active {
+            font-weight: bold;
+        }
+    }
+
+}
+
+//Top-bar Start
+.Topbar {
+    a {
+        color: $primary-1;
+    }
+
+    p {
+        cursor: text;
+    }
+
+    .main-btn {
+        @extend %main-btn-2;
+
+    }
+
+}
+
+// Navbar Start
+.navbar {
+    a {
+        h2 {
+            color: $primary-1;
+        }
+    }
+
+    .nav-link {
+        font-weight: 500;
+        font-size: 15px;
+
+    }
+
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link.active {
+        color: $primary-1;
+    }
+
+    .main-btn-nav {
+        @extend %main-btn-1;
+    }
+
+    .navbar-toggler {
+        color: $primary-1;
+        font-size: 25px;
+        border-color: $primary-1;
+    }
+
+    .dropdown-menu {
+
+        .dropdown-item {
+            padding: 5px 15px;
+            transition: padding 0.3s;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus,
+        .dropdown-item.active {
+            background-color: $primary-1;
+            color: $white;
+            padding-left: 20px;
+        }
+
+    }
+}
+
+// Carousel start
+.Carousel {
+    background: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url(img/carousel-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    @include flex-center();
+    min-height: calc(100vh - 120px);
+    background-size: cover;
+
+    .oll {
+
+        .main-btn-1 {
+            @extend %main-btn-1;
+        }
+
+        .main-btn-2 {
+            @extend %main-btn-3;
+        }
+    }
+
+}
+
+// Feature Start
+.Feature {
+    .number-icon {
+        width: 60px;
+        height: 60px;
+        @include flex-center();
+        background-color: $gray-200;
+        border-radius: 10px;
+
+        svg {
+            color: $primary-1;
+        }
+
+
+    }
+
+    h1 {
+        color: $gray-200;
+    }
+}
+
+// About Start
+.About {
+    .About-left {
+        min-height: 400px;
+
+        .image-about {
+            overflow: hidden;
+        }
+
+        .image-about::before {
+            content: "View-products";
+            position: absolute;
+            background-color: $primary-2;
+            width: 100%;
+            height: 100%;
+            @include flex-center();
+            font-weight: bold;
+            color: $white;
+            transition: 0.3s;
+            font-size: 1.5rem;
+            transform: translateX(100%);
+            z-index: 1;
+        }
+
+        .image-about:hover::before {
+            transform: translateX(0);
+        }
+    }
+
+    .about-text {
+        background-color: $gray-100;
+
+        .section-title {
+            @include section-title-after();
+        }
+
+        .title-1 {
+            max-width: 600px;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            @include flex-center();
+            background-color: $gray-200;
+            border-radius: 10px;
+
+            svg {
+                color: $primary-1;
+            }
+
+        }
+
+        h2 {
+            color: $primary-1;
+        }
+
+        .main-btn {
+            @extend %main-btn-1;
+        }
+    }
+}
+
+// Service Start
+.Service {
+
+    .section-title {
+        color: $black;
+        @include section-title();
+    }
+
+    .service-item {
+        background: $gray-100;
+        border-radius: 10px;
+        transition: 0.5s;
+
+        &:hover {
+            box-shadow: $box-shadow;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        img {
+            transition: 0.5s;
+        }
+
+        .min-btn {
+            color: $primary-1;
+            text-decoration: none;
+
+            svg {
+                color: $primary-1;
+            }
+        }
+
+    }
+
+}
+
+// why-choose Start
+.why-choose {
+
+    .why-choose-text {
+        background-color: $gray-100;
+
+        .section-title {
+            @include section-title-after();
+        }
+
+        .title-1 {
+            max-width: 600px;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            @include flex-center();
+            background-color: $gray-200;
+            border-radius: 10px;
+
+            svg {
+                color: $primary-1;
+            }
+
+        }
+
+        h2 {
+            color: $primary-1;
+        }
+
+    }
+
+    .why-choose-right {
+        min-height: 400px;
+
+        .image-why-choose {
+            overflow: hidden;
+        }
+
+        .image-why-choose::before {
+            content: "View-products";
+            position: absolute;
+            background-color: $primary-2;
+            width: 100%;
+            height: 100%;
+            @include flex-center();
+            font-weight: bold;
+            color: $white;
+            transition: 0.3s;
+            font-size: 1.5rem;
+            transform: translatex(100%);
+            z-index: 1;
+        }
+
+        .image-why-choose:hover::before {
+            transform: translateX(0);
+        }
+    }
+
+}
+
+// Projects Start
+.Projects {
+    .section-title {
+        color: $black;
+        @include section-title();
+    }
+
+    .list-menu {
+        @include flex-center();
+        list-style: none;
+
+        li {
+            color: $gray-700;
+            font-weight: 500;
+            cursor: pointer;
+            transition: .5s;
+            border-bottom: 2px solid transparent;
+
+            &.active,
+            &:hover,
+            &:focus {
+                color: $primary-1;
+                border-color: $primary-1;
+            }
+        }
+    }
+
+    .oll-itme {
+        border-radius: 20px;
+        transition: .5s;
+
+        .portfolio-overlay {
+            position: absolute;
+            @include flex-center();
+            width: 0;
+            height: 0;
+            bottom: 0;
+            left: 50%;
+            background: $background;
+            transition: .5s;
+
+            .main-btn {
+                @extend %main-btn-4;
+            }
+
+        }
+
+        & .portfolio-overlay .main-btn {
+            opacity: 0;
+        }
+
+        &:hover .portfolio-overlay {
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+
+        &:hover .portfolio-overlay .main-btn {
+            opacity: 1;
+        }
+
+        &:hover {
+            box-shadow: $box-shadow;
+        }
+
+        .tlite {
+            background-color: $gray-100;
+
+            p {
+                color: $primary-1;
+            }
+
+        }
+    }
+
+
+}
+
+// Contact  Start
+.Contact {
+    background-color: $gray-100;
+
+    .Contact-left {
+        min-height: 400px;
+
+        .image-Contact {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image-Contact::before {
+            content: "View-products";
+            position: absolute;
+            background-color: $primary-2;
+            width: 100%;
+            height: 100%;
+            @include flex-center();
+            font-weight: bold;
+            color: $white;
+            transition: 0.3s;
+            font-size: 1.5rem;
+            transform: translatex(100%);
+            z-index: 1;
+        }
+
+        .image-Contact:hover::before {
+            transform: translateX(0);
+        }
+
+    }
+
+    .Contact-text {
+        .section-title {
+            color: $gray-700;
+            @include section-title-after();
+        }
+
+        form {
+            .input-text {
+                height: 55px;
+                border: none;
+                display: block;
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 400;
+
+                &:focus {
+                    outline: 5px solid $primary-2;
+                }
+            }
+
+        }
+
+        .main-btn {
+            @extend %main-btn-1;
+        }
+    }
+
+}
+
+// documentation  Start
+.documentation {
+    background-color: $gray-100;
+
+    .documentation-left {
+        min-height: 400px;
+
+        .image-documentation {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image-documentation::before {
+            content: "View-products";
+            position: absolute;
+            background-color: $primary-2;
+            width: 100%;
+            height: 100%;
+            @include flex-center();
+            font-weight: bold;
+            color: $white;
+            transition: 0.3s;
+            font-size: 1.5rem;
+            transform: translatex(100%);
+            z-index: 1;
+        }
+
+        .image-documentation:hover::before {
+            transform: translateX(0);
+        }
+
+    }
+
+    .documentation-text {
+        .section-title {
+            color: $gray-700;
+            @include section-title-after();
+        }
+
+        form {
+            .input-text {
+                height: 55px;
+                border: none;
+                display: block;
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 400;
+
+                &:focus {
+                    outline: 5px solid $primary-2;
+                }
+            }
+
+        }
+
+        .main-btn {
+            @extend %main-btn-1;
+        }
+    }
+
+}
+
+// Team 
+.Team {
+    .section-title {
+        color: $black;
+        @include section-title();
+    }
+
+    .team-item {
+        img {
+            transition: .5s;
+        }
+
+        .team-social {
+            position: absolute;
+            width: 38px;
+            top: 50%;
+            left: -38px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            background: #FFFFFF;
+            transition: .5s;
+
+            .main-btn {
+                @extend %main-btn-teem;
+            }
+        }
+
+        .oll-text {
+            background-color: $gray-100;
+            border: 5px solid $gray-200;
+            border-top: 0;
+
+        }
+    }
+
+    .team-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .team-item:hover .team-social {
+        left: 0px;
+    }
+
+
+
+
+}
+
+//Footer
+.Footer {
+    background-color: $gray-700;
+
+    p {
+        color: $white;
+
+        svg {
+            color: $primary-1;
+        }
+    }
+
+    .Media li a {
+        width: 40px;
+        height: 40px;
+        @include flex-center();
+        color: $primary-1;
+        border: 1px solid $white;
+
+        &:hover {
+            background: $primary-1;
+            color: $white;
+        }
+    }
+
+    .footer-item {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: padding 0.3s;
+
+            &:hover {
+                color: $primary-1;
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .input-text {
+        height: 55px;
+        border: none;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 400;
+
+        &:focus {
+            outline: 5px solid $primary-2;
+        }
+    }
+
+    .main-btn {
+        @extend %main-btn-1;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .copyright {
+        a {
+            color: $primary-1;
+            text-decoration: none;
+        }
+    }
+}
