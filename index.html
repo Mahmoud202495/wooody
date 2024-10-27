@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
@@ -103,27 +104,94 @@
         </div>
     </nav>
     <!-- Navbar End -->
-    <!-- Carousel Start -->
-    <section class="Carousel">
-        <div class="container-fluid p-0 pb-5">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-8 text-center">
-                    <div class="oll">
-                        <h5 class="text-white text-uppercase mb-3 ">Welcome To WooDY</h5>
-                        <h1 class="display-3 text-white mb-4 fw-bold">Best Carpenter & Craftsman Services</h1>
-                        <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed
-                            stet
-                            sit diam no. Kasd rebum
-                            ipsum et diam justo clita et kasd rebum sea elitr.
-                        </p>
-                        <a href="#" class="main-btn-1 py-md-3 px-md-5 me-3 ">Read More</a>
-                        <a href="#" class="main-btn-2 py-md-3 px-md-5 ">Free Quote</a>
+    <!--Start Slider -->
+    <section class="Slider">
+        <div class="list ">
+            <div class="item active">
+                <img src="img/carousel-1.jpg" alt="" />
+                <div class="content">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h5 class="text-white text-uppercase mb-3 ">Welcome To WooDY</h5>
+                                <h1 class="display-3 text-white mb-0 mb-md-4 px-2 fw-bold">Best Carpenter & Craftsman
+                                    Services</h1>
+                                <p class="fs-5 fw-medium text-white mb-0 mb-md-4 p-2">Vero elitr justo clita lorem.
+                                    Ipsum
+                                    dolor at sed
+                                    stet
+                                    sit diam no. Kasd rebum
+                                    ipsum et diam justo clita et kasd rebum sea elitr.
+                                </p>
+                                <a href="#" class="main-btn me-sm-3 me-0 ">Read More</a>
+                                <a href="#" class="main-btn  mt-2">Free Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/carousel-2.jpg" alt="" />
+                <div class="content">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h5 class="text-white text-uppercase mb-3 ">Welcome To WooDY</h5>
+                                <h1 class="display-3 text-white mb-0 mb-md-4 px-2 fw-bold">Best Carpenter & Craftsman
+                                    Services</h1>
+                                <p class="fs-5 fw-medium text-white mb-0 mb-md-4 p-2">Vero elitr justo clita lorem.
+                                    Ipsum
+                                    dolor at sed
+                                    stet
+                                    sit diam no. Kasd rebum
+                                    ipsum et diam justo clita et kasd rebum sea elitr.
+                                </p>
+                                <a href="#" class="main-btn me-sm-3 me-0 ">Read More</a>
+                                <a href="#" class="main-btn  mt-2">Free Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/carousel-3.jpg" alt="" />
+                <div class="content">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h5 class="text-white text-uppercase mb-3 ">Welcome To WooDY</h5>
+                                <h1 class="display-3 text-white mb-0 mb-md-4 px-2 fw-bold">Best Carpenter & Craftsman
+                                    Services</h1>
+                                <p class="fs-5 fw-medium text-white mb-0 mb-md-4 p-2">Vero elitr justo clita lorem.
+                                    Ipsum
+                                    dolor at sed
+                                    stet
+                                    sit diam no. Kasd rebum
+                                    ipsum et diam justo clita et kasd rebum sea elitr.
+                                </p>
+                                <a href="#" class="main-btn me-sm-3 me-0 ">Read More</a>
+                                <a href="#" class="main-btn  mt-2">Free Quote</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="arrows d-none d-lg-flex">
+            <div class="arrow-left" id="prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="arrow-right" id="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+        <div class="thumbnails  d-none d-lg-flex">
+            <div class="item active"><img src="img/carousel-1.jpg" /></div>
+            <div class="item"><img src="img/carousel-2.jpg" /></div>
+            <div class="item"><img src="img/carousel-3.jpg" /></div>
+        </div>
     </section>
-    <!-- Carousel End -->
+    <!--End Slider-->
     <!-- Feature Start -->
     <section class="Feature p-5">
         <div class="container ">
@@ -318,7 +386,7 @@
                         <div class="row g-4 mb-4 pb-2">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
-                                    <div class="icon ">
+                                    <div class="icon">
                                         <i class="fa-solid fa-check fa-2x"></i>
                                     </div>
                                     <div class="ms-3">
@@ -700,11 +768,12 @@
     <!-- Footer End -->
     <!-- Back to Top -->
     <span>
-        <a href="#" class="main-btn-back-to-top "><i class="fa-solid fa-arrow-up"></i></a>
+        <a href="#" class="back-to-top "><i class="fa-solid fa-arrow-up"></i></a>
     </span>
 
     <!-- script -->
     <script src="bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
     <script src="all.min.js"></script>
 </body>
 
